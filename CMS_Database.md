@@ -1,11 +1,6 @@
-# Execute the following query
+create database CMSDB75696;
 
-## Create Database 
-## replace 123456 with your employeeid
-drop database CMSDB123456;
-create database CMSDB123456;
-
-use CMSDB123456;
+use CMSDB75696;
 
  
 

@@ -41,13 +41,28 @@ public class OrderFactory {
      public static OrderDetails[] vendorOrderHistory(int vendorId){
          return OrderDb.vendorOrderHistoryDb(vendorId);
      }
-     public static String acceptRejectOrder(){
-         return OrderDb.acceptOrRejectOrder();
+     public static OrderDetails[] OrderHistory(int vendorId){
+        return OrderDb.OrderHistoryDb(vendorId);
+     }
+     public static String acceptRejectOrder(int od){
+        return OrderDb.acceptOrRejectOrder(od);
+    }
+    public static OrderDetails[] validateOrderDetails(int OrderId,int vendorId){
+        return OrderDb.validateOrderDetails(OrderId,vendorId);
      }
      public static Customer validateCustomerLogin( int custLoginId, String custPassword){
         return OrderDb.validateCustomerLogin(custLoginId, custPassword);
       }
-      public static int placeOrder(){
-          return OrderDb.placeOrder();
-      }
+   
+      public static int placeOrder(int vendorId,String customerid,int foodId,int qty,int totalCost,int customer_walletbal){
+        return OrderDb.placeOrder(vendorId,customerid,foodId,qty,totalCost,customer_walletbal);
+    }
+    public static int insertNewFood(int fid, String fname, int fprice, int venId)
+    {
+        return  OrderDb.insertNewFood(fid,fname,fprice,venId);
+    }
+    public static int cancelOrder(Customer cs){
+        return OrderDb.cancelOrder(cs);
+    }
+   
 }
